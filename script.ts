@@ -39,16 +39,15 @@ aboutBtn.addEventListener('click', function () {
 
 function fadeIn() {
     if (!pageLoad) {
-
         window.scroll({
             top: stickyFooterHeight,
             behavior: 'smooth'
         });
-
+        
         content.classList.add('animate');
         setTimeout(function () {
             content.classList.remove('animate');
-        }, 450)
+        }, 400)
     } else {
         pageLoad = false;
     }

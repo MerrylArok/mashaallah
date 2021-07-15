@@ -39,7 +39,7 @@ function fadeIn() {
         content.classList.add('animate');
         setTimeout(function () {
             content.classList.remove('animate');
-        }, 450);
+        }, 400);
     }
     else {
         pageLoad = false;
