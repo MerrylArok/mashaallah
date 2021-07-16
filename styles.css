@@ -11,30 +11,49 @@ html {
   background-color: #008958;
   color: white;
   padding-top: 1vh;
+  text-align: center;
 }
 
 #navLinks {
   z-index: 100;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: #008958;
 }
+
 #navLinks > ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 1.5rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style-type: none;
-  margin: 0 5vw;
-  padding: 1vh 0;
+}
+
+#navLinks > ul li {
+  width: 33%;
+}
+
+#navLinks > ul li button {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
 }
 
 #content {
-  width: 80%;
   margin: 0 auto;
+  padding-top: 1.5rem;
 }
+
 #content #menu {
-  transition: 0.4s display ease-in;
+  padding: 0 10%;
 }
 
 #footer {
@@ -43,10 +62,21 @@ html {
   left: 0;
   background-color: #008958;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 2vh;
+}
+
+#map {
+  border: none;
 }
 
 .hide {
@@ -54,9 +84,24 @@ html {
 }
 
 .animate {
-  animation-name: eyeBlink;
-  animation-duration: 0.4s;
-  animation-iteration-count: 1;
+  -webkit-animation-name: eyeBlink;
+          animation-name: eyeBlink;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes eyeBlink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes eyeBlink {
@@ -64,11 +109,10 @@ html {
     opacity: 0;
   }
   50% {
-    opacity: 0.6;
+    opacity: .6;
   }
   100% {
     opacity: 1;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */

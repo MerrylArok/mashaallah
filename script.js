@@ -10,40 +10,52 @@ let about = document.getElementById("about");
 let menuBtn = document.getElementById("menuBtn");
 let contactBtn = document.getElementById("contactBtn");
 let aboutBtn = document.getElementById("aboutBtn");
+//Other Elements
+let map = document.getElementById("map");
+let address = document.getElementById("address");
+//------------------------------------------------------------------//
+//VARIABLES
 let stickyFooterHeight = footer.offsetHeight;
+let stickyNavHeight = navLinks.offsetTop;
+let width = window.innerWidth.toString();
 let pageLoad = true;
-menuBtn.addEventListener('click', function () {
+//-------------------------------------------------------------------//
+//FUNCTIONS
+menuBtn.addEventListener('click', function (e) {
     fadeIn();
     contact.classList.add('hide');
     about.classList.add('hide');
     menu.classList.remove('hide');
 });
-contactBtn.addEventListener('click', function () {
+contactBtn.addEventListener('click', function (e) {
     fadeIn();
     menu.classList.add('hide');
     about.classList.add('hide');
     contact.classList.remove('hide');
 });
-aboutBtn.addEventListener('click', function () {
+aboutBtn.addEventListener('click', function (e) {
     fadeIn();
     menu.classList.add('hide');
     contact.classList.add('hide');
     about.classList.remove('hide');
 });
 function fadeIn() {
-    if (!pageLoad) {
+    //only scroll to top if header was hidden
+    if (pageYOffset >= stickyNavHeight) {
         window.scroll({
-            top: stickyFooterHeight,
+            top: stickyNavHeight,
             behavior: 'smooth'
         });
-        content.classList.add('animate');
-        setTimeout(function () {
-            content.classList.remove('animate');
-        }, 400);
     }
-    else {
-        pageLoad = false;
-    }
+    //every time you hit the tab fire
+    content.classList.add('animate');
+    setTimeout(function () {
+        content.classList.remove('animate');
+    }, 400);
 }
+//------------------------------------------------------------------//
+//CODE
 menuBtn.click();
 content.style.paddingBottom = (stickyFooterHeight + 10).toString() + "px";
+map.setAttribute("width", width);
+map.setAttribute("height", width);

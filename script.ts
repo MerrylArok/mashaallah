@@ -13,24 +13,37 @@ let menuBtn = document.getElementById("menuBtn") as HTMLButtonElement;
 let contactBtn = document.getElementById("contactBtn") as HTMLButtonElement;
 let aboutBtn = document.getElementById("aboutBtn") as HTMLButtonElement;
 
+//Other Elements
+let map = document.getElementById("map") as HTMLMapElement;
+let address = document.getElementById("address") as HTMLElement;
+
+//------------------------------------------------------------------//
+
+//VARIABLES
+
 let stickyFooterHeight = footer.offsetHeight;
+let stickyNavHeight = navLinks.offsetTop;
 let pageLoad = true;
 
-menuBtn.addEventListener('click', function () {
+//-------------------------------------------------------------------//
+
+//FUNCTIONS
+
+menuBtn.addEventListener('click', function (e) {
     fadeIn();
     contact.classList.add('hide');
     about.classList.add('hide');
     menu.classList.remove('hide');
 })
 
-contactBtn.addEventListener('click', function () {
+contactBtn.addEventListener('click', function (e) {
     fadeIn();
     menu.classList.add('hide');
     about.classList.add('hide');
     contact.classList.remove('hide');
 })
 
-aboutBtn.addEventListener('click', function () {
+aboutBtn.addEventListener('click', function (e) {
     fadeIn();
     menu.classList.add('hide');
     contact.classList.add('hide');
@@ -38,20 +51,28 @@ aboutBtn.addEventListener('click', function () {
 })
 
 function fadeIn() {
-    if (!pageLoad) {
+    //only scroll to top if header was hidden
+    if (pageYOffset >= stickyNavHeight) {
         window.scroll({
-            top: stickyFooterHeight,
+            top: stickyNavHeight,
             behavior: 'smooth'
         });
-        
-        content.classList.add('animate');
-        setTimeout(function () {
-            content.classList.remove('animate');
-        }, 400)
-    } else {
-        pageLoad = false;
     }
+
+    //every time you hit the tab fire
+    content.classList.add('animate');
+    setTimeout(function () {
+        content.classList.remove('animate');
+    }, 400)
+
 }
+
+//------------------------------------------------------------------//
+
+//CODE
 
 menuBtn.click();
 content.style.paddingBottom = (stickyFooterHeight + 10).toString() + "px";
+
+
+
