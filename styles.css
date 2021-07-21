@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mr+De+Haviland&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,72 +9,113 @@ html {
   font-size: 16px;
 }
 
+h1, h2, h3, p {
+  font-weight: normal;
+}
+
+h2, h3, p {
+  font-family: "Inter";
+}
+
+h2 {
+  font-size: 1.75rem;
+  padding-bottom: 2vh;
+}
+
 #header {
-  background-color: #008958;
+  position: relative;
+  background-color: #5f0303;
   color: white;
   padding-top: 1vh;
   text-align: center;
+  z-index: 100;
+  font-family: "Parisienne", cursive;
+  font-size: 1.4rem;
 }
 
 #navLinks {
-  z-index: 100;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: #008958;
+  background-color: #5f0303;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+  border: 1.5px solid #5f0303;
+  z-index: 90;
 }
-
 #navLinks > ul {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
   list-style-type: none;
 }
-
 #navLinks > ul li {
-  width: 33%;
+  width: 33.3%;
 }
-
 #navLinks > ul li button {
   width: 100%;
   height: 100%;
+  font-family: "Inter";
+  font-weight: 550;
   font-size: 1.5rem;
+  padding: 1vh 0;
+  border: 0;
 }
 
 #content {
   margin: 0 auto;
   padding-top: 1.5rem;
+  background: url(/MashAllah/assets/paper_light.png) repeat;
+}
+#content #menu {
+  margin: 0 3%;
+  padding: 0 4%;
+  border-left: 2px solid #ba9c56;
+  border-right: 2px solid #ba9c56;
+}
+#content #menu #categories {
+  border-bottom: 2px dotted #ba9c56;
+  padding: 2vh 0;
+}
+#content #menu #categories h3, #content #menu #categories img {
+  padding-bottom: 0.5vh;
+}
+#content #contact #address {
+  padding: 0% 7% 7% 7%;
+}
+#content #about {
+  padding: 0 7%;
 }
 
-#content #menu {
-  padding: 0 10%;
+#item {
+  padding-bottom: 3vh;
+}
+
+img {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #footer {
+  z-index: 100;
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #008958;
+  background-color: #5f0303;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 2vh;
+  flex-direction: row;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+}
+#footer a {
+  flex: 1;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 2vh 0;
+}
+
+a:active {
+  background-color: yellow;
 }
 
 #map {
@@ -84,24 +127,9 @@ html {
 }
 
 .animate {
-  -webkit-animation-name: eyeBlink;
-          animation-name: eyeBlink;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-@-webkit-keyframes eyeBlink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .6;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation-name: eyeBlink;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
 }
 
 @keyframes eyeBlink {
@@ -109,10 +137,11 @@ html {
     opacity: 0;
   }
   50% {
-    opacity: .6;
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
   }
 }
+
 /*# sourceMappingURL=styles.css.map */
