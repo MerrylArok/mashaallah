@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mr+De+Haviland&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins&family=Fuggles&family=Space+Mono&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,24 +13,24 @@ h1, h2, h3, p {
   font-weight: normal;
 }
 
-h2, h3, p {
-  font-family: "Inter";
+h3, p {
+  font-family: "Poppins";
 }
 
 h2 {
-  font-size: 1.75rem;
-  padding-bottom: 2vh;
+  font-family: "Marcellus";
+  font-size: 2.5rem;
 }
 
 #header {
   position: relative;
   background-color: #5f0303;
   color: white;
-  padding-top: 1vh;
+  padding-top: 0.5vh;
   text-align: center;
   z-index: 100;
-  font-family: "Parisienne", cursive;
-  font-size: 1.4rem;
+  font-family: "Fuggles", cursive;
+  font-size: 2rem;
 }
 
 #navLinks {
@@ -54,45 +54,68 @@ h2 {
 #navLinks > ul li button {
   width: 100%;
   height: 100%;
-  font-family: "Inter";
+  font-family: "Space Mono";
+  background-color: #5f0303;
+  color: white;
   font-weight: 550;
-  font-size: 1.5rem;
-  padding: 1vh 0;
+  font-size: 1.4rem;
+  padding: 0.5vh 0 1vh 0;
   border: 0;
+}
+#navLinks > ul li button:active {
+  background-color: #6c0404;
+  transform: scale(0.96);
 }
 
 #content {
   margin: 0 auto;
   padding-top: 1.5rem;
-  background: url(assets/paper_light.png) repeat;
 }
 #content #menu {
-  margin: 0 3%;
-  padding: 0 4%;
-  border-left: 2px solid #ba9c56;
-  border-right: 2px solid #ba9c56;
+  padding: 0 7%;
 }
 #content #menu #categories {
-  border-bottom: 2px dotted #ba9c56;
-  padding: 2vh 0;
+  position: relative;
 }
-#content #menu #categories h3, #content #menu #categories img {
+#content #menu #categories h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+#content #menu #categories h2 span {
+  background-color: white;
+  padding: 0 1vh;
+}
+#content #menu #categories h2::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #ba9c56;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+#content #menu #categories #item {
+  padding: 2vh 0 3vh 0;
+}
+#content #menu #categories #item h3, #content #menu #categories #item img {
   padding-bottom: 0.5vh;
 }
+#content #menu #categories #item img {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
 #content #contact #address {
-  padding: 0% 7% 7% 7%;
+  padding: 0% 7% 7% 5%;
 }
 #content #about {
   padding: 0 7%;
 }
-
-#item {
-  padding-bottom: 3vh;
-}
-
-img {
-  box-sizing: border-box;
-  width: 100%;
+#content #about img {
+  padding: 2vh 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 #footer {
@@ -115,7 +138,8 @@ img {
 }
 
 a:active {
-  background-color: yellow;
+  background-color: #6c0404;
+  transform: scale(0.96);
 }
 
 #map {
