@@ -5,11 +5,16 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
+h2, h3, p {
+  color: #2d2d2d;
 }
 
-h1, h2, h3, p {
+html {
+  font-size: 16px;
+  background-color: #ecf0f1;
+}
+
+h1, h2, p {
   font-weight: normal;
 }
 
@@ -19,13 +24,21 @@ h3, p {
 
 h2 {
   font-family: "Marcellus";
-  font-size: 2.5rem;
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.75rem;
 }
 
 #header {
   position: relative;
   background-color: #5f0303;
-  color: white;
+  color: #ecf0f1;
   padding-top: 0.5vh;
   text-align: center;
   z-index: 100;
@@ -56,14 +69,14 @@ h2 {
   height: 100%;
   font-family: "Space Mono";
   background-color: #5f0303;
-  color: white;
+  color: #ecf0f1;
   font-weight: 550;
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding: 0.5vh 0 1vh 0;
   border: 0;
 }
 #navLinks > ul li button:active {
-  background-color: #6c0404;
+  background-color: #9E2A2B;
   transform: scale(0.96);
 }
 
@@ -83,14 +96,14 @@ h2 {
   position: relative;
 }
 #content #menu #categories h2 span {
-  background-color: white;
+  background-color: #ecf0f1;
   padding: 0 1vh;
 }
 #content #menu #categories h2::before {
   content: "";
-  height: 2px;
+  height: 1px;
   width: 100%;
-  background-color: #ba9c56;
+  background-color: #2d2d2d;
   position: absolute;
   left: 0;
   top: 50%;
@@ -99,15 +112,24 @@ h2 {
 #content #menu #categories #item {
   padding: 2vh 0 3vh 0;
 }
-#content #menu #categories #item h3, #content #menu #categories #item img {
-  padding-bottom: 0.5vh;
+#content #menu #categories #item h3 {
+  padding-bottom: 0.3vh;
 }
 #content #menu #categories #item img {
+  padding-bottom: 1vh;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
 #content #contact #address {
   padding: 0% 7% 7% 5%;
+  text-align: center;
+}
+#content #contact #address h3 {
+  font-weight: normal;
+}
+#content #contact #mapContainer {
+  height: 100vw;
+  width: 100vw;
 }
 #content #about {
   padding: 0 7%;
@@ -138,7 +160,7 @@ h2 {
 }
 
 a:active {
-  background-color: #6c0404;
+  background-color: #9E2A2B;
   transform: scale(0.96);
 }
 

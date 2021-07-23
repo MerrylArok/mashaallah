@@ -2,6 +2,7 @@
 let navLinks = document.getElementById("navLinks");
 let content = document.getElementById("content");
 let footer = document.getElementById("footer");
+let header = document.getElementById("header");
 //Content Elements
 let menu = document.getElementById("menu");
 let contact = document.getElementById("contact");
@@ -16,8 +17,6 @@ let address = document.getElementById("address");
 //------------------------------------------------------------------//
 //VARIABLES
 let stickyFooterHeight = footer.offsetHeight;
-let stickyNavHeight = navLinks.offsetTop;
-let width = window.innerWidth.toString();
 let pageLoad = true;
 //-------------------------------------------------------------------//
 //FUNCTIONS
@@ -41,9 +40,9 @@ aboutBtn.addEventListener('click', function (e) {
 });
 function fadeIn() {
     //only scroll to top if header was hidden
-    if (pageYOffset >= stickyNavHeight) {
+    if (pageYOffset >= header.offsetHeight) {
         window.scroll({
-            top: stickyNavHeight,
+            top: header.offsetHeight,
             behavior: 'smooth'
         });
     }
@@ -57,5 +56,3 @@ function fadeIn() {
 //CODE
 menuBtn.click();
 content.style.paddingBottom = (stickyFooterHeight + 10).toString() + "px";
-map.setAttribute("width", width);
-map.setAttribute("height", width);

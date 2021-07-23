@@ -5,25 +5,34 @@ $regularFont:'Poppins';
 $cursiveFont:'Marcellus';
 $navFont:'Space Mono';
 
+$offBlack: #2d2d2d;
+$offWhite: #ecf0f1;
+
 $primary:rgb(95, 3, 3);
-$secondary: #ba9c56;
+// $primary: #890000;
 
 @mixin onClick{
-    background-color: hsl(0, 93%, 22%);
+    background-color: #9E2A2B;
     transform: scale(0.96);
 }
 
 *{
     margin:0;
     padding:0; 
-    box-sizing: border-box;   
+    box-sizing: border-box; 
 }
+
+h2,h3,p{
+    color: $offBlack;
+}
+
 
 html{
     font-size: 16px;   
+    background-color:$offWhite;
 }
 
-h1,h2,h3,p{
+h1,h2,p{
     font-weight: normal;
 }
 
@@ -33,13 +42,21 @@ h3,p {
 
 h2{
     font-family: $cursiveFont;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+p{
+    font-size: 0.75rem;
 }
 
 #header{
     position: relative;
     background-color: $primary;
-    color:white;
+    color:$offWhite;
     padding-top: 0.5vh;
     text-align:center;
     z-index: 100;
@@ -71,9 +88,9 @@ h2{
                 font-family: $navFont;
                 background-color:$primary;
                 // text-transform: uppercase;
-                color:white;
+                color:$offWhite;
                 font-weight: 550;
-                font-size: 1.4rem;
+                font-size: 1rem;
                 padding:0.5vh 0 1vh 0;
                 border:0;
             }
@@ -104,16 +121,16 @@ h2{
             position:relative;
 
             span{
-                background-color: white;
+                background-color: $offWhite;
                 padding:0 1vh;
             }
         }
 
         h2::before{
             content: '';
-            height:2px;
+            height:1px;
             width: 100%;
-            background-color:$secondary;
+            background-color:$offBlack;
             position:absolute;
             left:0;
             top:50%;
@@ -123,11 +140,12 @@ h2{
         #item{
             padding:2vh 0 3vh 0;
 
-            h3,img{
-                padding-bottom: 0.5vh;
+            h3{
+                padding-bottom: 0.3vh;
             }            
 
             img{
+                padding-bottom: 1vh;
                 width: 100vw;
                 margin-left:calc(-50vw + 50%);
             }
@@ -140,6 +158,16 @@ h2{
     #contact{
         #address{
             padding:0% 7% 7% 5%;
+            text-align: center;
+            
+            h3{
+                font-weight:normal;
+            }
+        }
+
+        #mapContainer{
+            height:100vw;
+            width: 100vw;
         }
     }
 

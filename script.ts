@@ -2,6 +2,7 @@
 let navLinks = document.getElementById("navLinks") as HTMLElement;
 let content = document.getElementById("content") as HTMLElement;
 let footer = document.getElementById("footer") as HTMLElement;
+let header = document.getElementById("header") as HTMLElement;
 
 //Content Elements
 let menu = document.getElementById("menu") as HTMLElement;
@@ -22,7 +23,6 @@ let address = document.getElementById("address") as HTMLElement;
 //VARIABLES
 
 let stickyFooterHeight = footer.offsetHeight;
-let stickyNavHeight = navLinks.offsetTop;
 let pageLoad = true;
 
 //-------------------------------------------------------------------//
@@ -52,9 +52,9 @@ aboutBtn.addEventListener('click', function (e) {
 
 function fadeIn() {
     //only scroll to top if header was hidden
-    if (pageYOffset >= stickyNavHeight) {
+    if (pageYOffset >= header.offsetHeight) {
         window.scroll({
-            top: stickyNavHeight,
+            top: header.offsetHeight,
             behavior: 'smooth'
         });
     }
