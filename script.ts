@@ -3,6 +3,7 @@ let navLinks = document.getElementById("navLinks") as HTMLElement;
 let content = document.getElementById("content") as HTMLElement;
 let footer = document.getElementById("footer") as HTMLElement;
 let header = document.getElementById("header") as HTMLElement;
+let html = document.getElementById("html");
 
 //Content Elements
 let menu = document.getElementById("menu") as HTMLElement;
@@ -14,16 +15,24 @@ let menuBtn = document.getElementById("menuBtn") as HTMLButtonElement;
 let contactBtn = document.getElementById("contactBtn") as HTMLButtonElement;
 let aboutBtn = document.getElementById("aboutBtn") as HTMLButtonElement;
 
+//Modal Elements
+
+let dayElement = document.getElementById("day") as HTMLElement;
+let modalButton = document.getElementById("modalButton") as HTMLButtonElement;
+let modal = document.getElementById("modalOverlay") as HTMLElement;
+
 //Other Elements
 let map = document.getElementById("map") as HTMLMapElement;
 let address = document.getElementById("address") as HTMLElement;
-
 //------------------------------------------------------------------//
 
 //VARIABLES
 
 let stickyFooterHeight = footer.offsetHeight;
 let pageLoad = true;
+let currentDate = new Date();
+let today = currentDate.getDay();
+let days = ['Sundays', 'Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays']
 
 //-------------------------------------------------------------------//
 
@@ -50,12 +59,17 @@ aboutBtn.addEventListener('click', function (e) {
     about.classList.remove('hide');
 })
 
+modalButton.addEventListener('click', function(){
+    modal.style.display = "none";
+    html.style.overflow = "auto";
+})
+
 function fadeIn() {
     //only scroll to top if header was hidden
     if (pageYOffset >= header.offsetHeight) {
         window.scroll({
             top: header.offsetHeight,
-            behavior: 'smooth'
+            behavior: 'auto'
         });
     }
 
@@ -73,6 +87,8 @@ function fadeIn() {
 
 menuBtn.click();
 content.style.paddingBottom = (stickyFooterHeight + 10).toString() + "px";
+dayElement.innerText = days[today];
+
 
 
 

@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Poppins&family=Fuggles&family=Space+Mono&display=swap");
-html {
-  overflow: hidden;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins&family=Fuggles&family=Space+Mono&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +19,12 @@ h1, h2, p {
 }
 
 h3, p {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins";
 }
 
 h2 {
-  font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-family: "Marcellus";
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -46,7 +42,7 @@ p {
   padding-top: 0.5vh;
   text-align: center;
   z-index: 100;
-  font-family: "Fuggles";
+  font-family: "Fuggles", cursive;
   font-size: 2rem;
 }
 
@@ -71,7 +67,7 @@ p {
 #navLinks > ul li button {
   width: 100%;
   height: 100%;
-  font-family: "Space Mono", "Courier New", Courier, monospace;
+  font-family: "Space Mono";
   background-color: #000;
   color: #ecf0f1;
   font-weight: 550;
@@ -80,7 +76,7 @@ p {
   border: 0;
 }
 #navLinks > ul li button:active {
-  background-color: #333;
+  background-color: #9E2A2B;
   transform: scale(0.96);
 }
 
@@ -89,7 +85,7 @@ p {
   padding-top: 5vh;
 }
 #content #menu {
-  padding: 0 10%;
+  padding: 0 15%;
 }
 #content #menu #categories {
   position: relative;
@@ -106,11 +102,11 @@ p {
 }
 #content #menu #categories h2::before {
   content: "";
-  height: 0.01rem;
-  width: 85vw;
-  background-color: #e43c2f;
+  height: 1px;
+  width: 100%;
+  background-color: #2d2d2d;
   position: absolute;
-  left: -2.5vw;
+  left: 0;
   top: 50%;
   z-index: -1;
 }
@@ -124,7 +120,6 @@ p {
 }
 #content #menu #categories #item #itemInfo {
   display: flex;
-  align-items: center;
 }
 #content #menu #categories #item #itemInfo #infoBox {
   flex: 0.7;
@@ -134,14 +129,6 @@ p {
 }
 #content #menu #categories #item #itemInfo button {
   flex: 0.3;
-  padding: 1rem 0;
-  background-color: #e43c2f;
-  color: white;
-  border: 1px solid #e43c2f;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  box-shadow: 0px 0.25px 3px 0.15px rgba(0, 0, 0, 0.6);
 }
 #content #contact #address {
   padding: 0% 7% 7% 5%;
@@ -174,23 +161,16 @@ p {
   flex-direction: row;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
 }
-#footer a, #footer button {
+#footer a {
   flex: 1;
   text-decoration: none;
   color: white;
   text-align: center;
   padding: 2vh 0;
-  background-color: #000;
-  border: none;
-  font-size: 1rem;
-}
-#footer button:active {
-  background-color: #333;
-  transform: scale(0.96);
 }
 
 a:active {
-  background-color: #333;
+  background-color: #9E2A2B;
   transform: scale(0.96);
 }
 
@@ -224,53 +204,4 @@ a:active {
   z-index: 101;
 }
 
-#modalOverlay {
-  position: fixed;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#modalOverlay #modalBox {
-  position: relative;
-  background-color: #ecf0f1;
-  width: 80%;
-  height: 60%;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#modalOverlay #modalBox #modalButton {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem;
-  border: 1px solid #2d2d2d;
-  color: #2d2d2d;
-  font-size: 1rem;
-  font-weight: bolder;
-  border-radius: 5px;
-}
-#modalOverlay #modalBox #modalButton:hover {
-  background-color: #B00020;
-  color: #ecf0f1;
-}
-
-#snipcart .snipcart-base-button {
-  background-color: black;
-  color: #ecf0f1;
-  border: 1px solid black;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.cs.map */

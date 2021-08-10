@@ -1,18 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins&family=Fuggles&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Poppins&family=Fuggles&family=Space+Mono&display=swap');
 
-$logoFont:'Fuggles', cursive;
+$logoFont:'Fuggles';
 $regularFont:'Poppins';
-$cursiveFont:'Marcellus';
+$cursiveFont:'Arvo';
 $navFont:'Space Mono';
 
 $offBlack: #2d2d2d;
 $offWhite: #ecf0f1;
+$spicyRed: #e43c2f;
 
-$primary:rgb(95, 3, 3);
+// $primary:rgb(95, 3, 3);
+$primary:#000;
 // $primary: #890000;
 
+html{
+    overflow: hidden;
+}
+
 @mixin onClick{
-    background-color: #9E2A2B;
+    background-color: #333;
     transform: scale(0.96);
 }
 
@@ -20,6 +26,7 @@ $primary:rgb(95, 3, 3);
     margin:0;
     padding:0; 
     box-sizing: border-box; 
+    
 }
 
 h2,h3,p{
@@ -37,12 +44,12 @@ h1,h2,p{
 }
 
 h3,p {
-    font-family: $regularFont;
+    font-family: $regularFont, Arial, Helvetica, sans-serif;
 }
 
 h2{
-    font-family: $cursiveFont;
-    font-size: 2.5rem;
+    font-family: $cursiveFont,Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
 }
 
 h3{
@@ -85,7 +92,7 @@ p{
             button{
                 width:100%;
                 height:100%;
-                font-family: $navFont;
+                font-family: $navFont, 'Courier New', Courier, monospace;
                 background-color:$primary;
                 // text-transform: uppercase;
                 color:$offWhite;
@@ -107,10 +114,10 @@ p{
     padding-top:5vh;
     // background: url(assets/paper_light.png) repeat;
     //paper texture from Jorge Fuentes. Downloaded from toptal.com
-        
+    
     #menu{
                 
-        padding:0 15%;
+        padding:0 10%;
 
         #categories{
         position: relative;
@@ -129,11 +136,11 @@ p{
 
         h2::before{
             content: '';
-            height:1px;
-            width: 100%;
-            background-color:$offBlack;
+            height:0.01rem;
+            width: 85vw;
+            background-color:$spicyRed;
             position:absolute;
-            left:0;
+            left:-2.5vw;
             top:50%;
             z-index: -1;
         }
@@ -141,15 +148,39 @@ p{
         #item{
             padding:2vh 0 3vh 0;
 
-            h3{
-                padding-bottom: 0.3vh;
-            }            
-
             img{
                 padding: 2.5vh 0 1vh 0;
                 width: 100vw;
                 margin-left:calc(-50vw + 50%);
             }
+            
+            #itemInfo{
+                display:flex;
+                align-items: center;
+
+                #infoBox{
+                    flex:0.7;
+
+                    h3{
+                        padding-bottom: 0.3vh;
+                    }         
+                }
+
+                button{
+                    flex:0.3;
+                    padding:1rem 0;  
+                    background-color: $spicyRed;
+                    color:white;
+                    border: 1px solid $spicyRed;
+                    border-radius: 2rem;
+                    font-size: 1rem; 
+                    font-weight: bold;
+                    box-shadow:  0px 0.25px 3px 0.15px rgba(0,0,0,0.6);                
+                }
+            }
+
+
+            
         }
 
             
@@ -196,13 +227,20 @@ p{
     flex-direction: row;
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.7);
 
-    a{
+    a, button{
         flex: 1;
         text-decoration: none;
         color:white;
         text-align: center;            
         padding:2vh 0;
+        background-color: $primary;
+        border:none;
+        font-size:1rem;
     } 
+
+    button:active{
+        @include onClick;
+    }
   
 }
 
@@ -238,4 +276,66 @@ a:active{
         opacity:1;
     }
     
+}
+
+
+#snipcart{
+    position:relative;
+    z-index:101;
+}
+
+#modalOverlay{
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+    height:100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    #modalBox{
+        position:relative;
+        background-color: $offWhite;
+        width:80%;
+        height:60%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        #modalButton{
+            position:absolute;
+            top:0;
+            right:0;
+            padding:0.75rem 1rem;
+            margin: 0.5rem;
+            border:1px solid $offBlack;
+            color:$offBlack;
+            font-size: 1rem;
+            font-weight: bolder;
+            border-radius: 5px;            
+        }
+
+        #modalButton:hover{
+            background-color: #B00020;
+            color:$offWhite;
+        }
+    }
+}
+
+#snipcart{
+
+    .snipcart-base-button{ 
+        background-color: black;
+        color:$offWhite;
+        border: 1px solid black;
+        border-radius: 2rem;
+        font-size: 1rem; 
+        font-weight: bold;               
+    }
 }

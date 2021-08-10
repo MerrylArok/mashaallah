@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -17,10 +17,13 @@
 </head>
 
 <body>
+
+    <!-- Main header element -->
     <header id="header">
         <h1>Mashaallah Baraka</h1>
     </header>
 
+    <!-- Sticky Navbar element -->
     <nav id="navLinks">
         <ul>
             <li><button id="menuBtn">Menu</button></li>
@@ -29,6 +32,7 @@
         </ul>
     </nav>
 
+    <!-- Main content element -->
     <div id="content">
         <div id="menu">
 
@@ -38,29 +42,71 @@
                 <div id="item" class="breakfast beef chicken">
                     <img src="https://images.unsplash.com/photo-1540432797114-187727adf19b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
                         alt="picture">
-                    <h3>Fool / Fava Beans</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                    <div id="itemInfo">
+                        <div id="infoBox">
+                            <h3>Fool</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                        </div>
+
+                        <button class="buy-button snipcart-add-item" data-item-id="1" data-item-price="6.00"
+                            data-item-url="/" data-item-name="Fool" data-item-custom1-name="Notes to the chef"
+                            data-item-custom1-type="textarea">
+                            $6.00
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div id="item" class="breakfast beef chicken">
+                    <img src="https://images.unsplash.com/photo-1540432797114-187727adf19b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                        alt="picture">
+                    <div id="itemInfo">
+                        <div id="infoBox">
+                            <h3>Kebda / Beef Liver</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                        </div>
+
+                        <button class="buy-button snipcart-add-item" data-item-id="2" data-item-price="7.50"
+                            data-item-url="/" data-item-name="Kebda" data-item-custom1-name="Notes to the chef"
+                            data-item-custom1-type="textarea">
+                            $7.50
+                        </button>
+                    </div>
                 </div>
 
                 <div id="item" class="breakfast beef chicken">
                     <img src="https://images.unsplash.com/photo-1540432797114-187727adf19b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
                         alt="picture">
-                    <h3>Kebda / Beef Liver</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                    <div id="itemInfo">
+                        <div id="infoBox">
+                            <h3>Eggs</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                        </div>
+
+                        <button class="buy-button snipcart-add-item" data-item-id="3" data-item-price="6.50"
+                            data-item-url="/" data-item-name="Eggs" data-item-custom1-name="Notes to the chef"
+                            data-item-custom1-type="textarea">
+                            $6.50
+                        </button>
+                    </div>
                 </div>
 
                 <div id="item" class="breakfast beef chicken">
                     <img src="https://images.unsplash.com/photo-1540432797114-187727adf19b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
                         alt="picture">
-                    <h3>Eggs</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
-                </div>
+                    <div id="itemInfo">
+                        <div id="infoBox">
+                            <h3>Injera</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                        </div>
 
-                <div id="item" class="breakfast beef chicken">
-                    <img src="https://images.unsplash.com/photo-1540432797114-187727adf19b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                        alt="picture">
-                    <h3>Injera</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, autem.</p>
+                        <button class="buy-button snipcart-add-item" data-item-id="4" data-item-price="6.00"
+                            data-item-url="/" data-item-name="Injera" data-item-custom1-name="Notes to the chef"
+                            data-item-custom1-type="textarea">
+                            $6.00
+                        </button>
+                    </div>
                 </div>
 
                 <div id="item" class="breakfast beef chicken">
@@ -217,6 +263,9 @@
                     Calgary, AB <br />
                     (403) 455-4412
                 </h3>
+
+                <h3> Open 10 AM - 2 AM, <bold>7</bold> days a week
+                </h3>
             </div>
             <div id="mapContainer">
                 <iframe width="100%" height="100%" id="map" allowfullscreen
@@ -249,19 +298,36 @@
 
             </p>
         </div>
-
     </div>
 
+    <!-- Footer element -->
     <footer id="footer">
         <a href="tel:403-455-4412"><i class="fas fa-phone-alt"></i></a>
-        <a id="cart" href="#"><i class="fas fa-shopping-cart"></i></a>
+        <button id="cart" class="snipcart-checkout"><i class="fas fa-shopping-cart"></i></button>
     </footer>
 
+    <!-- Cart Element -->
+    <div hidden id="snipcart" data-config-modal-style="side"
+        data-api-key="MzRkZjRhMTMtOTQ3Ny00Nzk3LTgwZmMtOTUyYjk3MzE1OTE5NjM3NjI2MDI0MzczNzMwMTc4" data-currency="cad">
+    </div>
 
+    <!-- Modal window -->
+    <div id="modalOverlay">
+        <div id="modalBox">
+            
+            <h3>Delicious meals served</h3>
+            <h2 id="day">Today</h2>
+            <h3>between 10am - 2am</h3>
+            
+            <button id="modalButton">X</button>
+        </div>      
+    </div>
+
+    <!-- Scripts go here -->
     <script src="script.js"></script>
     <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
-    <div id="snipcart" data-config-modal-style="side"
-        data-api-key="MzRkZjRhMTMtOTQ3Ny00Nzk3LTgwZmMtOTUyYjk3MzE1OTE5NjM3NjI2MDI0MzczNzMwMTc4" hidden></div>
+
+
 </body>
 
 </html>
