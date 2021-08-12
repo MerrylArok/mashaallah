@@ -86,7 +86,7 @@ p {
 
 #content {
   margin: 0 auto;
-  padding-top: 5vh;
+  padding-top: 3vh;
 }
 #content #menu {
   padding: 0 10%;
@@ -138,10 +138,10 @@ p {
   background-color: #e43c2f;
   color: white;
   border: 1px solid #e43c2f;
-  border-radius: 2rem;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0px 0.25px 3px 0.15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 4px 0.25px rgba(0, 0, 0, 0.6);
 }
 #content #contact #address {
   padding: 0% 7% 7% 5%;
@@ -149,6 +149,10 @@ p {
 }
 #content #contact #address h3 {
   font-weight: normal;
+}
+#content #contact #address h3:last-child {
+  font-weight: bold;
+  padding-top: 1vh;
 }
 #content #contact #mapContainer {
   height: 100vw;
@@ -264,13 +268,23 @@ a:active {
   color: #ecf0f1;
 }
 
+#snipcart {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
 #snipcart .snipcart-base-button {
-  background-color: black;
+  background-color: #000;
   color: #ecf0f1;
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: bold;
+}
+#snipcart .snipcart-cart-header__icon, #snipcart .snipcart-modal__close-icon {
+  color: #000;
+}
+#snipcart .snipcart__box--badge-highlight {
+  background-color: #e43c2f;
+  color: #ecf0f1;
 }
 
 /*# sourceMappingURL=styles.css.map */

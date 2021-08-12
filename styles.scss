@@ -111,7 +111,7 @@ p{
 
 #content{    
     margin:0 auto;
-    padding-top:5vh;
+    padding-top:3vh;
     // background: url(assets/paper_light.png) repeat;
     //paper texture from Jorge Fuentes. Downloaded from toptal.com
     
@@ -172,10 +172,10 @@ p{
                     background-color: $spicyRed;
                     color:white;
                     border: 1px solid $spicyRed;
-                    border-radius: 2rem;
+                    border-radius: 5px;
                     font-size: 1rem; 
                     font-weight: bold;
-                    box-shadow:  0px 0.25px 3px 0.15px rgba(0,0,0,0.6);                
+                    box-shadow:  0px 1px 4px 0.25px rgba(0,0,0,0.6);                
                 }
             }
 
@@ -194,6 +194,11 @@ p{
             
             h3{
                 font-weight:normal;
+            }
+
+            h3:last-child{
+                font-weight:bold;
+                padding-top:1vh;
             }
         }
 
@@ -329,13 +334,23 @@ a:active{
 }
 
 #snipcart{
+    font-family:$regularFont, Arial, Helvetica, sans-serif;
 
     .snipcart-base-button{ 
-        background-color: black;
+        background-color: $primary;
         color:$offWhite;
-        border: 1px solid black;
+        border: 1px solid $primary;
         border-radius: 2rem;
         font-size: 1rem; 
         font-weight: bold;               
+    }
+
+    .snipcart-cart-header__icon, .snipcart-modal__close-icon  {        
+        color: $primary;
+    }
+
+    .snipcart__box--badge-highlight{
+        background-color:$spicyRed;
+        color:$offWhite;
     }
 }
