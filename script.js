@@ -33,6 +33,7 @@ menuBtn.addEventListener('click', function (e) {
     contact.classList.add('hide');
     about.classList.add('hide');
     menu.classList.remove('hide');
+    menuBtn.classList.add('buttonHiglight');
 });
 contactBtn.addEventListener('click', function (e) {
     fadeIn();

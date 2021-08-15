@@ -7,7 +7,9 @@ $navFont:'Space Mono';
 
 $offBlack: #2d2d2d;
 $offWhite: #ecf0f1;
-$spicyRed: #e43c2f;
+$spicyRed: #d91400;
+$deepRed:#b0171f;
+$coolBlue: #125fca;
 
 // $primary:rgb(95, 3, 3);
 $primary:#000;
@@ -49,15 +51,15 @@ h3,p {
 
 h2{
     font-family: $cursiveFont,Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 h3{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 p{
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 #header{
@@ -76,7 +78,7 @@ p{
     top:0;
     background-color: $primary;
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.7);
-    border:1.5px solid $primary;
+    // border:1.5px solid $primary;
     z-index: 90;
 
     > ul{
@@ -92,14 +94,14 @@ p{
             button{
                 width:100%;
                 height:100%;
-                font-family: $navFont, 'Courier New', Courier, monospace;
+                font-family: $regularFont, 'Courier New', Courier, monospace;
+                text-transform: uppercase;
                 background-color:$primary;
-                // text-transform: uppercase;
                 color:$offWhite;
                 font-weight: 550;
-                font-size: 1rem;
-                padding:0.5vh 0 1vh 0;
-                border:0;
+                font-size: 0.9rem;
+                padding:1vh 0 1vh 0;
+                border:0;      
             }
 
             button:active{
@@ -111,7 +113,7 @@ p{
 
 #content{    
     margin:0 auto;
-    padding-top:3vh;
+    padding-top:3.75vh;
     // background: url(assets/paper_light.png) repeat;
     //paper texture from Jorge Fuentes. Downloaded from toptal.com
     
@@ -126,11 +128,12 @@ p{
         h2{
             text-transform: uppercase;
             text-align: center;  
-            position:relative;
+            position:relative;            
 
             span{
                 background-color: $offWhite;
                 padding:0 1vh;
+                color:$deepRed;
             }
         }
 
@@ -149,7 +152,7 @@ p{
             padding:2vh 0 3vh 0;
 
             img{
-                padding: 2.5vh 0 1vh 0;
+                padding: 1vh 0 1vh 0;
                 width: 100vw;
                 margin-left:calc(-50vw + 50%);
             }
@@ -163,19 +166,21 @@ p{
 
                     h3{
                         padding-bottom: 0.3vh;
-                    }         
+                    }
                 }
 
                 button{
                     flex:0.3;
                     padding:1rem 0;  
-                    background-color: $spicyRed;
+                    background-color: $coolBlue;
                     color:white;
-                    border: 1px solid $spicyRed;
-                    border-radius: 5px;
+                    border: 1px solid $coolBlue;
+                    border-radius:28px;
                     font-size: 1rem; 
                     font-weight: bold;
-                    box-shadow:  0px 1px 4px 0.25px rgba(0,0,0,0.6);                
+                    position: relative;
+                    left:3vw;
+                    // box-shadow:  0px 1px 5px 0.25px rgba(0,0,0,0.8);                
                 }
             }
 
@@ -196,9 +201,9 @@ p{
                 font-weight:normal;
             }
 
-            h3:last-child{
+            h3:first-child{
                 font-weight:bold;
-                padding-top:1vh;
+                padding-bottom:1vh;
             }
         }
 
@@ -230,6 +235,7 @@ p{
     width: 100vw;
     display: flex;
     flex-direction: row;
+    align-items: center;
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.7);
 
     a, button{
@@ -242,6 +248,15 @@ p{
         border:none;
         font-size:1rem;
     } 
+
+    span{
+        background-image:linear-gradient($offBlack,rgb(126, 124, 124) 50%,$offBlack);
+        position:absolute;
+        text-align:center;
+        left:50%;
+        width:1px;
+        height:50%;
+    }   
 
     button:active{
         @include onClick;
@@ -267,6 +282,13 @@ a:active{
     animation-duration:0.4s;
     animation-iteration-count: 1;
 }
+
+.buttonHiglight{
+    background-color:$offWhite;
+    color:$offBlack;
+    box-shadow: none;
+}
+
 
 @keyframes eyeBlink {
     0%{
@@ -312,6 +334,10 @@ a:active{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        h2{
+            padding:1vh 0;
+        }
 
         #modalButton{
             position:absolute;

@@ -28,15 +28,15 @@ h3, p {
 
 h2 {
   font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 p {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 #header {
@@ -55,7 +55,6 @@ p {
   top: 0;
   background-color: #000;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
-  border: 1.5px solid #000;
   z-index: 90;
 }
 #navLinks > ul {
@@ -71,12 +70,13 @@ p {
 #navLinks > ul li button {
   width: 100%;
   height: 100%;
-  font-family: "Space Mono", "Courier New", Courier, monospace;
+  font-family: "Poppins", "Courier New", Courier, monospace;
+  text-transform: uppercase;
   background-color: #000;
   color: #ecf0f1;
   font-weight: 550;
-  font-size: 1rem;
-  padding: 0.5vh 0 1vh 0;
+  font-size: 0.9rem;
+  padding: 1vh 0 1vh 0;
   border: 0;
 }
 #navLinks > ul li button:active {
@@ -86,7 +86,7 @@ p {
 
 #content {
   margin: 0 auto;
-  padding-top: 3vh;
+  padding-top: 3.75vh;
 }
 #content #menu {
   padding: 0 10%;
@@ -103,12 +103,13 @@ p {
 #content #menu #categories h2 span {
   background-color: #ecf0f1;
   padding: 0 1vh;
+  color: #b0171f;
 }
 #content #menu #categories h2::before {
   content: "";
   height: 0.01rem;
   width: 85vw;
-  background-color: #e43c2f;
+  background-color: #d91400;
   position: absolute;
   left: -2.5vw;
   top: 50%;
@@ -118,7 +119,7 @@ p {
   padding: 2vh 0 3vh 0;
 }
 #content #menu #categories #item img {
-  padding: 2.5vh 0 1vh 0;
+  padding: 1vh 0 1vh 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
@@ -135,13 +136,14 @@ p {
 #content #menu #categories #item #itemInfo button {
   flex: 0.3;
   padding: 1rem 0;
-  background-color: #e43c2f;
+  background-color: #125fca;
   color: white;
-  border: 1px solid #e43c2f;
-  border-radius: 5px;
+  border: 1px solid #125fca;
+  border-radius: 28px;
   font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0px 1px 4px 0.25px rgba(0, 0, 0, 0.6);
+  position: relative;
+  left: 3vw;
 }
 #content #contact #address {
   padding: 0% 7% 7% 5%;
@@ -150,9 +152,9 @@ p {
 #content #contact #address h3 {
   font-weight: normal;
 }
-#content #contact #address h3:last-child {
+#content #contact #address h3:first-child {
   font-weight: bold;
-  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 #content #contact #mapContainer {
   height: 100vw;
@@ -176,6 +178,7 @@ p {
   width: 100vw;
   display: flex;
   flex-direction: row;
+  align-items: center;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
 }
 #footer a, #footer button {
@@ -187,6 +190,14 @@ p {
   background-color: #000;
   border: none;
   font-size: 1rem;
+}
+#footer span {
+  background-image: linear-gradient(#2d2d2d, #7e7c7c 50%, #2d2d2d);
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  width: 1px;
+  height: 50%;
 }
 #footer button:active {
   background-color: #333;
@@ -210,6 +221,12 @@ a:active {
   animation-name: eyeBlink;
   animation-duration: 0.4s;
   animation-iteration-count: 1;
+}
+
+.buttonHiglight {
+  background-color: #ecf0f1;
+  color: #2d2d2d;
+  box-shadow: none;
 }
 
 @keyframes eyeBlink {
@@ -251,6 +268,9 @@ a:active {
   align-items: center;
   justify-content: center;
 }
+#modalOverlay #modalBox h2 {
+  padding: 1vh 0;
+}
 #modalOverlay #modalBox #modalButton {
   position: absolute;
   top: 0;
@@ -283,7 +303,7 @@ a:active {
   color: #000;
 }
 #snipcart .snipcart__box--badge-highlight {
-  background-color: #e43c2f;
+  background-color: #d91400;
   color: #ecf0f1;
 }
 
