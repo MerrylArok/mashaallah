@@ -59,7 +59,7 @@ aboutBtn.addEventListener('click', function (e) {
     about.classList.remove('hide');
 })
 
-modalButton.addEventListener('click', function(){
+modalButton.addEventListener('click', function () {
     modal.style.display = "none";
     html.style.overflow = "auto";
 })

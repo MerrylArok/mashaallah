@@ -250,12 +250,13 @@ p{
     } 
 
     span{
-        background-image:linear-gradient($offBlack,rgb(126, 124, 124) 50%,$offBlack);
+        // background-image:linear-gradient($offBlack,rgb(126, 124, 124) 50%,$offBlack);
         position:absolute;
-        text-align:center;
         left:50%;
+        top:0%;
         width:1px;
         height:50%;
+        color: rgba(255, 255, 255, 0.1875)
     }   
 
     button:active{
@@ -327,7 +328,7 @@ a:active{
     #modalBox{
         position:relative;
         background-color: $offWhite;
-        background-image: url('/MashAllah/assets/modal.png');
+        background-image: url('assets/modal.png');
         background-size: cover;
         background-position: right;
         width:80%;
