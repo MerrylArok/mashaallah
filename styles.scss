@@ -99,7 +99,7 @@ p{
                 background-color:$primary;
                 color:$offWhite;
                 font-weight: 550;
-                font-size: 0.9rem;
+                font-size: 1.1rem;
                 padding:1vh 0 1vh 0;
                 border:0;      
             }
@@ -132,14 +132,14 @@ p{
 
             span{
                 background-color: $offWhite;
-                padding:0 1vh;
+                padding:0 2vh;
                 color:$deepRed;
             }
         }
 
         h2::before{
             content: '';
-            height:0.01rem;
+            height:0.05vh;
             width: 85vw;
             background-color:$spicyRed;
             position:absolute;
@@ -327,6 +327,9 @@ a:active{
     #modalBox{
         position:relative;
         background-color: $offWhite;
+        background-image: url('/MashAllah/assets/modal.png');
+        background-size: cover;
+        background-position: right;
         width:80%;
         height:60%;
         border-radius: 5px;
@@ -345,8 +348,9 @@ a:active{
             right:0;
             padding:0.75rem 1rem;
             margin: 0.5rem;
-            border:1px solid $offBlack;
-            color:$offBlack;
+            border:1px solid $spicyRed;
+            color:$offWhite;
+            background-color: $spicyRed;
             font-size: 1rem;
             font-weight: bolder;
             border-radius: 5px;            
