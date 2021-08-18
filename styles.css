@@ -28,7 +28,7 @@ h3, p {
 
 h2 {
   font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.75rem;
+  font-size: 2.3rem;
 }
 
 h3 {
@@ -43,7 +43,7 @@ p {
   position: relative;
   background-color: #000;
   color: #ecf0f1;
-  padding-top: 0.5vh;
+  padding-top: 0.5rem;
   text-align: center;
   z-index: 100;
   font-family: "Fuggles";
@@ -76,7 +76,7 @@ p {
   color: #ecf0f1;
   font-weight: 550;
   font-size: 1.1rem;
-  padding: 1vh 0 1vh 0;
+  padding: 0.9rem 0;
   border: 0;
 }
 #navLinks > ul li button:active {
@@ -86,7 +86,7 @@ p {
 
 #content {
   margin: 0 auto;
-  padding-top: 3.75vh;
+  padding-top: 7vh;
 }
 #content #menu {
   padding: 0 10%;
@@ -116,10 +116,10 @@ p {
   z-index: -1;
 }
 #content #menu #categories #item {
-  padding: 2vh 0 3vh 0;
+  padding: 4vh 0 5vh 0;
 }
 #content #menu #categories #item img {
-  padding: 1vh 0 1vh 0;
+  padding: 1vh 0 2vh 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
@@ -131,7 +131,7 @@ p {
   flex: 0.7;
 }
 #content #menu #categories #item #itemInfo #infoBox h3 {
-  padding-bottom: 0.3vh;
+  padding-bottom: 0.7vh;
 }
 #content #menu #categories #item #itemInfo button {
   flex: 0.3;
@@ -152,16 +152,15 @@ p {
 #content #contact #address h3 {
   font-weight: normal;
 }
-#content #contact #address h3:first-child {
-  font-weight: bold;
-  padding-bottom: 1vh;
-}
 #content #contact #mapContainer {
   height: 100vw;
   width: 100vw;
 }
 #content #about {
   padding: 0 13%;
+}
+#content #about h2 {
+  text-align: center;
 }
 #content #about img {
   padding: 2vh 0;
@@ -248,7 +247,7 @@ a:active {
 #modalOverlay {
   position: fixed;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.75);
   height: 100vh;
   width: 100vw;
   top: 0;
